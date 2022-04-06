@@ -1,0 +1,572 @@
+
+
+#main {
+  font-family: "Lato", sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+#nav-header{
+  background-color: #1a1b1b;
+  width: 100%;
+  height: 60px;
+  font-size: .9em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 10px 10px;
+}
+
+#nav-header a{
+  color:  #ededed;
+  text-decoration: none;
+}
+
+#nav-header a:hover{
+  color:  #ededed;
+  text-decoration: none;
+}
+
+#logo{
+  float: left;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.header-link-underline{
+  line-height: 100%;
+  float: right;
+  padding: 15px 25px;
+  display:  inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#body-data,
+#infographic-module,
+#top-heading{
+  color: white;
+  background-color: #1a1b1b;
+}
+
+#body-stats{
+  text-align: center;
+  padding-bottom: 40px;
+
+}
+
+#top {
+  background-color: #1a1b1b;
+  color: white;
+}
+
+p {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: #cd2600;
+}
+
+a:hover{
+  color: #ededed;
+}
+
+#top-heading{
+  text-align: center;
+  /*background-image: url('icons/news-corner.png');*/
+  background-repeat: no-repeat;
+  background-size: 200px;
+}
+
+#headline {
+  font-family: "Averia Serif Libre", serif;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 2px;
+  padding-top: 70px;
+}
+
+#sub-head {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4em;
+  color: #ededed;
+  padding-bottom:  30px;
+  border-bottom:  #cd2600 solid 1px;
+  margin: 0 auto;
+  margin-bottom:  30px;
+  width: 80%;
+}
+
+#filter-box{
+  width:  80%;
+  margin:  0 auto;
+}
+
+#news-finder-text {
+  text-align: left;
+}
+
+
+#news-finder-head {
+  color: #ededed;
+  color:#cd2600;
+  text-align: left;
+  font-size: 1.25em;
+  font-weight:  700;
+  font-family: "Lato", sans-serif;
+}
+
+.button,
+#dropbtn {
+  position: relative;
+  text-align: center;
+  margin: 5px 3px;
+  padding: 2px 7px;
+  background: #1a1b1b;
+  color: #ededed;
+  border: 1px solid #cd2600;
+  border-radius: 5px;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: .9em;
+  cursor: pointer;
+}
+
+#dropbtn{
+  margin-right: 10px;
+}
+
+.button::after,
+#dropbtn::after,
+.header-link-underline::after
+{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0.175rem;
+  left: 0;
+  bottom: 0;
+  background: #cd2600;
+  transform: scale(0, 0.5);
+}
+
+.button:hover::after,
+#dropbtn:hover::after,
+.header-link-underline:hover::after {
+  transform: scale(0.9, 0.9);
+  transition: transform 0.3s ease;
+}
+
+/*from w3schools----------------------------------*/
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1b1b;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #000;
+}
+
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button)*/
+.show {
+  display: block;
+}
+/*end from w3schools-------------------------------------------------*/
+
+#search-box{
+  border-radius: 5px;
+  background-color: #ededed;
+  color: #1a1b1b;
+  width: 240px;
+  padding: 5px;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+#data-sentence{
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+#data-box {
+  position: relative;
+}
+
+#arr-next {
+  float: right;
+  right: 0;
+}
+
+#arr-prev {
+  float: left;
+  left: 0;
+}
+
+.btn-arrow {
+  margin:  0px 5px;
+  width: 30px;
+  position: absolute;
+  top: 48%;
+  cursor:  pointer;
+}
+
+.data-card {
+  width: 100%;
+  padding:10px 20px;
+  margin: 10px auto;
+  background-color: #ededed;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #1a1b1b;
+  content: attr(data-rowid);
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.data-card:hover {
+  background-color: #1a1b1b;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  color: #ededed;
+}
+
+.datatable {
+  margin: 0px 40px;
+  padding: 1rem 0;
+}
+
+#datatable_center {
+  padding: 0 0rem;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr; /*GRID FORMATION #######*/
+  gap: 0rem 2rem;
+}
+
+.badges{
+    float: right;
+    margin: 10px;
+    color:  #ededed;
+    text-align: center;
+
+}
+.badges a{
+  color:  #ededed;
+  display: block;
+}
+
+.active-status{
+    background-color: #cd2600;
+    margin: 10px;
+    padding: 5px;
+}
+
+.apology-status{
+    background-color: #3914CC;
+    margin: 10px;
+    padding: 5px;
+}
+
+.story-written{
+    background-color: #cd2600;
+    margin: 10px;
+    padding: 5px;
+}
+
+#noDatacardsText{
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.news-name {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-family: "Averia Serif Libre", serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.news-setting {
+  padding-bottom:  10px;
+}
+
+.term-text{
+}
+
+.single-term{
+  white-space: nowrap;
+  padding:  0px 5px;
+}
+
+.center-lynch-stats {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+}
+
+.lynch-report-total {
+  border-right: 4px solid #b51007;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+
+  font-size: 3em;
+
+  color: #1a1b1b;
+  font-weight: 700;
+  transition: all 0.5s linear;
+}
+
+.data-card:hover .lynch-report-total {
+  color: #ededed;
+}
+
+.lynch-reported {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  height: 70px;
+  width: 100px;
+
+  font-size: 1.25em;
+  padding-left: 15px;
+}
+
+.datacard-icons{
+  font-size: 2.5em;
+}
+
+.archive-link {
+  font-size: 1.5em;
+  font-style: bold;
+}
+
+.legend{
+  padding: 20px;
+  text-align: center;
+  font-size: .8em;
+  font-weight: 700;
+}
+
+#legend-active{
+  display: inline-block;
+  background-color: #cd2600;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+
+#legend-apology{
+  display: inline-block;
+  background-color: #3914CC;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+
+#legend-story{
+  display: inline-block;
+  background-color: #cd2600;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+
+#big-header-stats {
+  text-align: center;
+  margin:  100px auto;
+}
+
+.stat-number {
+  font-family: "Averia Serif Libre", serif;
+  font-size: 3.75em;
+  font-weight: 700;
+  color: #cd2600;
+}
+
+.stat-description {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.photo {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.caption {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.photo-cred {
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.bolding {
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+#about-module{
+  text-align: left;
+  width: 80%;
+  margin:  50px auto;
+  padding: 30px;
+  border: 1px solid #cd2600;
+}
+
+#infographic-module{
+  text-align: center;
+  padding:  50px 20px;
+  color: #ededed;
+}
+
+#info-pcf{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+#data-methods-module h3{
+  text-align: center;
+}
+
+#data-methods-module span{
+  margin:  0px auto;
+  padding-bottom:  5px;
+  border-bottom: 1px solid #cd2600;
+}
+
+#data-methods-module{
+  width: 80%;
+  margin:  0px auto;
+  padding-bottom:  80px;
+  padding-top:  40px;
+
+}
+
+.centered{
+  text-align: center;
+  border-bottom: 0px;
+}
+
+#btn-github-link{
+  background-color: #cd2600;
+  padding:  10px;
+  border-radius:  5px;
+  color:  #ededed;
+  border-bottom: 0px;
+
+}
+
+#btn-github {
+  margin-top: 25px;
+  padding: 0px 15px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0px !important;
+}
+
+#footer {
+  padding: 10px 10px 5px 10px;
+  background-color: #1a1b1b;
+}
+
+#footer-links{
+  text-align: center;
+  color: #ededed;
+}
+
+#footer-links a{
+  white-space: nowrap;
+  font-size: .9em;
+  font-weight: 700;
+  padding: 0px 10px;
+}
+
+#footer-links i{
+  width: 10px;
+  color: #ededed;
+}
+
+#footer p {
+  font-size: .75em;
+  text-align: center;
+  color: white;
+}
+.container p {
+  text-align: center;
+}
+
+@media screen and (max-width: 720px){
+  #headline{
+    font-size: 1.75em;
+  }
+  #sub-head{
+    font-size: 1em;
+  }
+  .body{
+    width: 95%;
+  }
+  .active-status,
+  .story-written,
+  .apology-status{
+    margin: 5px;
+    margin-right: 0px;
+  }
+  .data-card{
+    margin: 5px auto;
+    padding: 10px 10px;
+  }
+  #about-module,
+  #data-methods-module,
+  #filter-box{
+    width: 90%;
+  }
+  #top-heading{
+    background-size: 120px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  #datatable_center{
+    grid-template-columns: 1fr;
+  }
+}

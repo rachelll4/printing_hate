@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/icons/logo-small-site.png" type = "image/png">
+    <title>Newspapers</title>
+    <script type="module" src="script.js" crossorigin></script>
+    <!--script type="module" src="index-script.js"></script-->
+
+
+  <!--load jquery-->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!--Font Awesome icons-->
+	<script src="https://kit.fontawesome.com/63e8803495.js" crossorigin="anonymous"></script>
+
+	<!--Google fonts-->
+	<!--Header font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+	<!--Body font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+	<!--Element stylesheet-->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+  <body id="main">
+
+  	<div id="nav-header">
+  		<span id="logo"><a href="https://lynching.cnsmaryland.org/"><img src="https://lynching.cnsmaryland.org/wp-content/uploads/2021/08/logo3.png" alt="A logo reading 'Printing Hate'" width=90px></a></span>
+  	</div>
+
+  	<div id="top-heading">
+			<p id="headline">EXPLORE LYNCHING COVERAGE</p>
+			<p id="sub-head">White-owned newspapers helped create a culture that fomented racial terror lynchings across the U.S.</p>
+			<br>
+		</div>
+
+
+		<div id="body-data"><div class="body">
+
+			<div id="filter-box">
+        <p id="news-finder-head">BROWSE OUR DATABASE</p>
+        <p id="news-finder-text" class="bolding">By Jack Rasiel, Rachel Logan, Nick McMillan, Kara Newhouse, Sahana Jayaraman, Trisha Ahmed, Molly Castle Work, Adam Marton and Sean Mussenden</p>
+
+        <p id="news-finder-text">Using computational historical research methods, the Howard Center analyzed more than 40,000 scanned newspaper pages to identify and classify problematic historical coverage of racial terror lynchings by white-owned newspapers. All of the papers in the database, which we expect to continue updating, were still published in some form when they were added to the database. The current name of a paper may differ from a paper's historical name included in the newspaper scans included here because of newspaper mergers, purchases and ownership changes.  <a href="https://lynching.cnsmaryland.org/2021/12/20/our-new-database-expands-the-scope-of-printing-hate-series/" target="_blank">Read more</a> about how we defined harmful coverage and traced newspaper lineages.
+        </p>
+
+
+				<div id="filter-terms">Coverage Classification Filters:
+					<span class='button sortbtn' id='btnAll'>all</span>
+					<span class='button sortbtn' id='btnSensational'>
+						uses sensational/racist language
+					</span>
+					<span class='button sortbtn' id='btnAcceptable'>
+						justifies lynching
+					</span>
+					<span class='button sortbtn' id='btnGuilty'>
+						assumes victim guilt
+					</span>
+					<span class='button sortbtn' id='btnOrganize'>
+						plays organizing role
+					</span>
+					<br>
+
+					<span style="white-space: nowrap;">State Filter: <span class="dropdown">
+					  <span id="dropbtn" class="button">select</span>
+					  <div id="myDropdown" class="dropdown-content">
+					  	<a class="possible-state">Any</a>
+					    <a class="possible-state">Alabama</a>
+					    <a class="possible-state">Arkansas</a>
+					    <a class="possible-state">Delaware</a>
+					    <a class="possible-state">Florida</a>
+					    <a class="possible-state">Georgia</a>
+					    <a class="possible-state">Kansas</a>
+					    <a class="possible-state">Kentucky</a>
+					    <a class="possible-state">Louisiana</a>
+					    <a class="possible-state">Maryland</a>
+					    <a class="possible-state">Mississippi</a>
+					    <a class="possible-state">Missouri</a>
+					    <a class="possible-state">North Carolina</a>
+					    <a class="possible-state">Oklahoma</a>
+					    <a class="possible-state">South Carolina</a>
+					    <a class="possible-state">Tennessee</a>
+					    <a class="possible-state">Texas</a>
+					    <a class="possible-state">Virginia</a>
+
+					  </div>
+					</span></span>
+
+				</div>
+			</div>
+			<p id="data-sentence"></p>
+
+
+
+			<div id="data-box">
+				<img alt="left facing arrow button" class="btn-arrow" id="arr-prev" src="icons/left-bullet-arrow.png">
+				<section class="datatable">
+					<div id = datatable_center>
+						<!--datacards go here-->
+					</div>
+				</section>
+				<img alt="right facing arrow button" class="btn-arrow" id="arr-next" src="icons/right-bullet-arrow.png">
+			</div>
+			<div class="legend">
+				<div><div id="legend-story"></div>Story: The Howard Center wrote about this newspaper's historical coverage</div>
+			</div>
+
+		</div></div>
+
+
+
+		<!--div id="body-stats"><div class="body">
+
+			<div id="about-module">
+				<p>Some flavor text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+			</div>
+
+		</div> </div>
+
+
+
+		<div id="infographic-module"><div class="body">
+				<div class="flourish-embed flourish-chart" data-src="visualisation/6911940"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+		</div></div-->
+
+
+
+		<div id="body-methods"><div class="body">
+
+			<div id="data-methods-module">
+				<h3><span>OUR DATA METHODS<span></h3>
+
+				<p>The database was the product of nearly a year of computationally driven, historical research. It relied on a large-scale text analysis of historical newspaper scans stored in digital archives. It would not have been possible without the work of civil rights activists, journalists and historians over the last 150 years to document individual lynchings and the work of archivists, librarians and historians to build digital repositories of historic newspapers. </p>
+
+				<div class="centered">
+					<!-- <span id="btn-github">
+						<a id="btn-github-link" href="https://github.com/Capital-News-Service/lynching-web-app" target="_blank">Go to GitHub</a>
+					</span> -->
+					<span id="btn-github">
+						<a id="btn-github-link" href="https://lynching.cnsmaryland.org/2021/12/20/our-new-database-expands-the-scope-of-printing-hate-series/" target="_blank">Read full methodology</a>
+					</span>
+				</div>
+
+			</div>
+
+		</div> </div>
+
+
+		<div id="footer">
+			<div id="footer-links">
+				<a href="https://merrill.umd.edu/howard-center-for-investigative-journalism" target="_blank">THE HOWARD CENTER</a>
+				<a href="https://merrill.umd.edu/about" target="_blank">MERRILL COLLEGE</a>
+				<a href="https://cnsmaryland.org/the-howard-center-for-investigative-journalism/" target="_blank">THE HOWARD CENTER WIRE</a>
+				<span style="white-space:nowrap;">
+					<a alt="facebook" href="https://www.facebook.com/MarylandCNS/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					<a alt="twitter" href="https://twitter.com/cnsmd" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a alt="youtube" href="https://www.youtube.com/channel/UC2aRmYJQ_VVcPC_y59pGbpQ" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a alt="instagram" href="https://www.instagram.com/cnsmd/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+				</span>
+			</div>
+			<p>Copyright The Howard Center For Investigative Journalism.<br>Credits: Jack Rasiel, Rachel Logan, Nick McMillan, Kara Newhouse, Sahana Jayaraman, Trisha Ahmed, Molly Castle Work, Adam Marton and Sean Mussenden.</p>
+		</div>
+
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
